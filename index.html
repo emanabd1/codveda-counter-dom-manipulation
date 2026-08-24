@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Codveda Internship Task 3 - Counter Application using JavaScript DOM Manipulation"
+    >
+
+    <title>Luxe Counter | Codveda Task 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="#" class="logo">
+                Luxe<span>.</span>
+            </a>
+
+            <p class="task-label">
+                CODEVDA • TASK 3
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <section class="counter-section">
+
+            <div class="counter-container">
+
+                <div class="counter-intro">
+
+                    <p class="eyebrow">
+                        BASIC DOM MANIPULATION
+                    </p>
+
+                    <h1>
+                        Simple.
+                        <span>Interactive.</span>
+                    </h1>
+
+                    <p class="description">
+                        A minimal counter application built with
+                        vanilla JavaScript and DOM manipulation.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     COUNTER CARD
+                ========================== -->
+
+                <div class="counter-card">
+
+                    <p class="counter-label">
+                        CURRENT COUNT
+                    </p>
+
+                    <div
+                        id="count"
+                        class="count-display"
+                        aria-live="polite"
+                    >
+                        0
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <p
+                        id="status"
+                        class="status"
+                    >
+                        Ready to count
+                    </p>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="button-group">
+
+                        <button
+                            id="decrementBtn"
+                            class="counter-button secondary"
+                            type="button"
+                            aria-label="Decrease count"
+                        >
+                            −
+                        </button>
+
+                        <button
+                            id="resetBtn"
+                            class="counter-button reset"
+                            type="button"
+                        >
+                            Reset
+                        </button>
+
+                        <button
+                            id="incrementBtn"
+                            class="counter-button primary"
+                            type="button"
+                            aria-label="Increase count"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <!-- INFORMATION -->
+
+                    <div class="counter-info">
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                +
+                            </span>
+
+                            <span>
+                                Increment
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                −
+                            </span>
+
+                            <span>
+                                Decrement
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                ↻
+                            </span>
+
+                            <span>
+                                Reset
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <p>
+            Codveda Technologies • Front End Development Internship
+        </p>
+
+        <p>
+            Task 3 • Basic DOM Manipulation • 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
