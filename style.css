@@ -1,0 +1,676 @@
+/* =====================================================
+   CODEVDA TASK 3
+   BASIC DOM MANIPULATION
+   ===================================================== */
+
+
+/* =========================
+   COLOR PALETTE
+========================= */
+
+:root {
+
+    --blush: #F9EDF0;
+
+    --champagne: #E6C8B7;
+
+    --cognac: #C3955B;
+
+    --amber: #BA6A36;
+
+    --emerald: #1C3934;
+
+    --espresso: #261311;
+
+    --white: #FFFFFF;
+
+    --muted: #6B5650;
+
+    --border: #DFCDC5;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--blush);
+
+    color: var(--espresso);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+button {
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    width: min(1120px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    background: var(--emerald);
+
+    color: var(--white);
+
+    box-shadow:
+        0 3px 15px rgba(38, 19, 17, 0.12);
+}
+
+
+.header-container {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: var(--blush);
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+    color: var(--amber);
+}
+
+
+.task-label {
+
+    color: var(--champagne);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    flex: 1;
+}
+
+
+.counter-section {
+
+    min-height:
+        calc(100vh - 132px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 0;
+}
+
+
+.counter-container {
+
+    width: min(850px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.counter-intro {
+    text-align: left;
+}
+
+
+.eyebrow {
+
+    color: var(--amber);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 18px;
+}
+
+
+.counter-intro h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 70px);
+
+    line-height: 0.95;
+
+    font-weight: normal;
+
+    letter-spacing: -3px;
+}
+
+
+.counter-intro h1 span {
+
+    display: block;
+
+    color: var(--emerald);
+
+    font-style: italic;
+}
+
+
+.description {
+
+    max-width: 360px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   COUNTER CARD
+========================= */
+
+.counter-card {
+
+    padding: 45px 40px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 45px rgba(38, 19, 17, 0.08);
+}
+
+
+/* =========================
+   COUNTER LABEL
+========================= */
+
+.counter-label {
+
+    color: var(--amber);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   COUNT
+========================= */
+
+.count-display {
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 8px;
+
+    color: var(--emerald);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 100px;
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* Animation when count changes */
+
+.count-display.change {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+    min-height: 24px;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.button-group {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.5fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.counter-button {
+
+    min-height: 50px;
+
+    border-radius: 4px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+
+/* Decrement */
+
+.counter-button.secondary {
+
+    background: var(--blush);
+
+    color: var(--emerald);
+
+    border: 1px solid var(--border);
+
+    font-size: 26px;
+}
+
+
+.counter-button.secondary:hover {
+
+    background: var(--champagne);
+
+    border-color: var(--cognac);
+}
+
+
+/* Reset */
+
+.counter-button.reset {
+
+    background: transparent;
+
+    color: var(--espresso);
+
+    border: 1px solid var(--border);
+
+    font-size: 13px;
+}
+
+
+.counter-button.reset:hover {
+
+    background: var(--espresso);
+
+    color: var(--white);
+
+    border-color: var(--espresso);
+}
+
+
+/* Increment */
+
+.counter-button.primary {
+
+    background: var(--amber);
+
+    color: var(--white);
+
+    border: 1px solid var(--amber);
+
+    font-size: 26px;
+}
+
+
+.counter-button.primary:hover {
+
+    background: var(--emerald);
+
+    border-color: var(--emerald);
+}
+
+
+.counter-button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   DISABLED DECREMENT
+========================= */
+
+.counter-button.secondary:disabled {
+
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    background: #F2E9E6;
+
+}
+
+
+.counter-button.secondary:disabled:hover {
+
+    background: #F2E9E6;
+
+    border-color: var(--border);
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.counter-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 30px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #EEE2DE;
+}
+
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+.info-icon {
+
+    width: 21px;
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--emerald);
+
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    padding: 20px;
+
+    background: var(--espresso);
+
+    color: var(--champagne);
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+.footer p + p {
+
+    margin-top: 3px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .counter-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        max-width: 600px;
+    }
+
+
+    .counter-intro {
+
+        text-align: center;
+    }
+
+
+    .description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .counter-section {
+
+        padding: 60px 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .header-container {
+
+        min-height: 65px;
+    }
+
+
+    .logo {
+
+        font-size: 27px;
+    }
+
+
+    .task-label {
+
+        font-size: 9px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    .counter-section {
+
+        padding: 45px 0;
+    }
+
+
+    .counter-intro h1 {
+
+        font-size: 52px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .counter-card {
+
+        padding: 35px 20px;
+    }
+
+
+    .count-display {
+
+        min-height: 105px;
+
+        font-size: 82px;
+    }
+
+
+    .button-group {
+
+        grid-template-columns:
+            1fr 1.3fr 1fr;
+    }
+
+
+    .counter-info {
+
+        gap: 12px;
+    }
+
+
+    .info-item {
+
+        font-size: 9px;
+    }
+
+}
